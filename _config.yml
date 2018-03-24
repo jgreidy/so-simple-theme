@@ -13,14 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-theme: jekyll-theme-so-simple
-# remote_theme: mmistakes/so-simple-theme
-locale: en-US
-title: "My Awesome Site"
-description: "It really is the best."
-baseurl: # the subpath of your site, e.g. "/blog"
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: # path of site logo, e.g. "/images/logo.png"
+
+title: BAND
+email: band@band.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A BAND so good
+  we don't need a slogan.
+baseurl: "/band" # the subpath of your site, e.g. /blog
+url: "https://xxx.bitbucket.io/band" # the base hostname & protocol for your site, e.g. http://example.com
+BASE_PATH : http://foo.com/band
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
 words_per_minute: # 200
@@ -96,8 +97,20 @@ author:
       url:
       icon:
 
-# Footer Links
-footer_links:
-  - title: Feed
-    url: atom.xml
-    icon: fas fa-rss-square
+# BAND Info
+band_title: "BAND"
+
+collections:
+  audios:
+  photos:
+    source: photos.csv
+    layout: photos
+    output: true
+  members:
+    output: true
+
+exclude: [ docs ]
+exclude: [ example ]
+exclude: [ RUNNING.md ]
+exclude: [ categories ]
+exclude: [ posts ]
