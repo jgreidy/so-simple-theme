@@ -1,0 +1,10 @@
+{% for tune in site.audios %}
+<dt>{{ tune.title }}</dt>
+<dd><div class="media-wrapper">
+    <audio id="player2-{{ forloop.index }}" preload="none" controls style="max-width:100%;">
+        <source src="{{ tune.audio_path | relative_url }}" type="audio/mp3">
+    </audio>
+    {{ tune.content }}
+</div></dd>
+{% endfor %}
+

@@ -1,0 +1,9 @@
+<ul>
+{% for gig in site.data.events %}
+  {% if gig.Band == site.band_title %}
+    <li>
+    <a href="{{ gig.DetailsURL }}">{{ gig.dateStartDisplay }}, {{ gig.dateStartTime }} to {{ gig.dateEndTime }} at {{ gig.Venue }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>

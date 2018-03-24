@@ -1,0 +1,33 @@
+{% capture the_collection %}{{ page.collection }}{% endcapture %}
+
+{% if page.collection %}
+  {% assign document = site[the_collection] %}
+{% endif %}
+
+{% for links in document %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+      {% assign prevtitle = prev.title %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexttitle = next.title %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+
+<div id="collection-prev-next">
+{% if prevurl %}<a href="{{ prevurl | relative_url }}" class="alignleft"><< {{ prevtitle }}</a>{% endif %}
+{% if nexturl %}<a href="{{ nexturl | relative_url }}" class="alignright">{{ nexttitle }} >></a>{% endif %}
+<div style="clear: both;"></div>
+</div>
+<script>
+/* post pagination keyboard shortcuts */
+document.body.onkeyup = function(e){
+  if (e.keyCode == '37') { window.location = '{{ prevurl | relative_url }}'; } // left arrow key
+  if (e.keyCode == '39') { window.location = '{{ nexturl | relative_url }}'; } // right arrow key
+};
+</script>

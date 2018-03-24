@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="column">
+    {% assign photos = site.photos | where: "column", "A" %}
+    {% for photo in photos %}
+    <a href="{{ photo.url | relative_url }}"><img src="{{ '/images/w356/' | relative_url}}{{ photo.filename }}" alt="{{ photo.title }}" /></a>
+    {% endfor %}
+  </div>
+  <div class="column">
+    {% assign photos = site.photos | where: "column", "B" %}
+    {% for photo in photos %}
+    <a href="{{ photo.url | relative_url }}"><img src="{{ '/images/w356/' | relative_url}}{{ photo.filename }}" alt="{{ photo.title }}" /></a>
+    {% endfor %}
+  </div>
+  <div class="column">
+    {% assign photos = site.photos | where: "column", "C" %}
+    {% for photo in photos %}
+    <a href="{{ photo.url | relative_url }}"><img src="{{ '/images/w356/' | relative_url}}{{ photo.filename }}" alt="{{ photo.title }}" /></a>
+    {% endfor %}
+  </div>
+  <div class="column">
+    {% assign photos = site.photos | where: "column", "D" %}
+    {% for photo in photos %}
+    <a href="{{ photo.url | relative_url }}"><img src="{{ '/images/w356/' | relative_url}}{{ photo.filename }}" alt="{{ photo.title }}" /></a>
+    {% endfor %}
+  </div>
+</div>

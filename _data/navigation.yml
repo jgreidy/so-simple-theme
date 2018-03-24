@@ -2,6 +2,16 @@
 
 - title: Home
   url: /
+- title: Events
+  url: /#events
+- title: Listen
+  url: /#listen
+- title: Photos
+  url: /#photos
+- title: Who
+  url: /#who
+- title: Contact
+  url: /#contact
 # - title: Posts
 #   url: /posts/
 # - title: Categories

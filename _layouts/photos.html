@@ -1,0 +1,15 @@
+---
+layout: page
+---
+<div class="prev-next">{% include collection-prev-next.html %}</div>
+<div class="photos">
+  <img src="{{ '/images/original/' | relative_url }}{{ page.filename }}" alt="{{page.title}}" />
+
+  <div>
+    {{ page.caption }}
+    {{ content }}
+    {% if page.credit != empty and page.credit != blank %}
+    <div class="float-right">Photo/art: {{ page.credit }}</div>
+    {% endif %}
+  </div>
+</div>

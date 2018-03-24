@@ -1,0 +1,5 @@
+# Audio support
+AddType audio/mp3 .mp3
+AddType audio/oga .oga
+AddType audio/ogg .ogg
+AddType audio/wav .wav
