@@ -1,0 +1,21 @@
+{% assign members = site.members | sort: "member_order" %}
+{% for member in members %}
+{% assign bio = member.content | truncatewords: 50 | strip_html %}
+<div class="members">
+  <a href="{{ member.url | relative_url }}">
+    <img class="float-left pad-right" src="{{ '/images/w356/' | relative_url }}{{ member.filename }}"
+    alt="Photo by {{ member.photo_credit }}" width="200"
+    title="{{ member.name }}"/>
+ </a>
+ <ul class="leaders">
+    <li>
+      <span><strong>{{ member.name }}</strong></span>
+      {% if member.roles.size > 0 %}
+      <span>{{ member.roles | array_to_sentence_string }}</span>
+      {% endif %}
+    </li>
+  </ul>
+ {{ bio }} <a href="{{ member.url | relative_url }}">more...</a>
+</div>
+<p class="clear"></p>
+{% endfor %}
