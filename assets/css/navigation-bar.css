@@ -1,0 +1,31 @@
+
+.page-image {
+  z-index: -1;
+  margin-top: -55px;
+}
+
+.site-nav {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.anchor-point {
+  margin-top: 65px;
+}
+
+.masthead {
+  margin-top: 50px;
+}
+
+.page-title {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
