@@ -1,0 +1,13 @@
+---
+layout: page
+---
+<div class="members">
+  <img class="float-left pad-right" src="{{ '/images/w356/' | relative_url }}{{ page.filename }}" alt="{{page.title}}" />
+  <ul class="leaders">
+    <li>
+      <span>TOiVO</span>
+      <span>{{ page.roles | array_to_sentence_string }}</span>
+    </li>
+  </ul>
+  {{ content }}
+</div>
